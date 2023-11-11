@@ -1,0 +1,16 @@
+.headings{
+    margin-top:50px;
+}
+
+ul{
+    padding-left:0;
+}
+
+li{
+    margin-bottom:0.5rem;
+}
+
+.link {
+    color:grey;
+    text-decoration:none;
+}
