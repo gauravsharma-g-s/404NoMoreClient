@@ -199,7 +199,7 @@ function UserEdit() {
                                     gridColumn: isNonMobile ? "1/2" : "span 4"
                                 }}
                             >
-                                Save
+                                {!loading?("Save"):("")}
                             </LoadingButton>
                             <Button style={{
                                 marginTop: isNonMobile ? "undefined" : "0",

@@ -41,10 +41,10 @@ function Footer() {
           <h3 className='headings'>Stay In Touch</h3>
           <ul style={{ listStyleType: 'none' }}>
 
-            <li style={{ marginBottom: '1rem' }}><Link to='/home' className='link'><Facebook style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Facebook</span></Link></li>
-            <li style={{ marginBottom: '1rem' }}><Link to='/users' className='link'><Twitter style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Twitter</span></Link></li>
-            <li style={{ marginBottom: '1rem' }}><Link to='/tags' className='link'><LinkedIn style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Linkedin</span></Link></li>
-            <li style={{ marginBottom: '1rem' }}><Link to='/allquestions' className='link'><Instagram style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Instagram</span></Link></li>
+            <li style={{ marginBottom: '1rem' }}><a href='https://www.facebook.com/profile.php?id=61552964567923' target='_blank' className='link'><Facebook style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Facebook</span></a></li>
+            <li style={{ marginBottom: '1rem' }}><a href='https://twitter.com/Four04nomore' target='_blank' className='link'><Twitter style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Twitter</span></a></li>
+            <li style={{ marginBottom: '1rem' }}><a href='https://www.linkedin.com/company/404nomore/' target='_blank' className='link'><LinkedIn style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Linkedin</span></a></li>
+            <li style={{ marginBottom: '1rem' }}><a href='https://www.instagram.com/four04nomore/?next=https%3A%2F%2Fbusiness.instagram.com%2F' target='_blank' className='link'><Instagram style={{ verticalAlign: 'middle' }} /><span style={{ marginLeft: '0.4rem' }}>Instagram</span></a></li>
           </ul>
         </Grid>
         <Grid item sx={{ margin: '0rem 2rem 2rem', textAlign: 'justify' }} style={{ paddingLeft: '0rem' }} xs={8} sm={4} md={2} lg={1}>

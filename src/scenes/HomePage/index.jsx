@@ -19,7 +19,6 @@ function HomePage() {
   const params = new URLSearchParams(location.search);
   const displayAlert = params.get('displayAlert');
   const isNonMobileScreen = useMediaQuery("(min-width:840px)")
-
   const primaryLight = theme.palette.primary.light;
   const handleAlertClose = (reason) => {
     if (reason === 'clickaway') {

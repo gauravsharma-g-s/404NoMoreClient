@@ -127,9 +127,14 @@ const Form = () => {
       body: JSON.stringify(values),
     });
     const loggedIn = await loggedInResponse.json();
+    console.log(loggedInResponse)
     setLoading(false);
-    onSubmitProps.resetForm();
-    if (loggedIn) {                                                 // Login Succesfull
+    if(loggedInResponse.status===400){
+      setAlertOpen(true);
+      setErrorMessage("Please check your email or password")
+    }
+    else if (loggedInResponse.status===200) {  
+      onSubmitProps.resetForm();                                               // Login Succesfull
       dispatch(                                                     // dispatch to localStorage
         setLogin({
           user: loggedIn.user,
@@ -256,7 +261,7 @@ const Form = () => {
 
             {/* BUTTONS */}
             <Box>
-              <LoadingButton loading={loading} loadingIndicator={pageType === "otp" ? "Verifying" : pageType === "register" ? "Signing" : 'Logging In'} variant="outlined"
+              <LoadingButton loading={loading} loadingIndicator={pageType === "otp" ? "Verifying..." : pageType === "register" ? "Signing..." : 'Logging In...'} variant="outlined"
                 fullWidth
                 type="submit"
                 sx={{
@@ -267,7 +272,7 @@ const Form = () => {
                   "&:hover": { color: palette.primary.main },
                 }}
               >
-                {isLogin ? "LOGIN" : isRegister ? "SIGN UP" : "SUBMIT"}
+                {!loading?(<span>{isLogin ? "LOGIN" : isRegister ? "SIGN UP" : "SUBMIT"}</span>):("")}
               </LoadingButton>
               <Typography
                 onClick={() => {

@@ -28,13 +28,14 @@ function TagsWidget() {
     { name: "Array", description: "An array is a data structure that stores elements of the same type in a contiguous block of memory. It allows for efficient indexing and retrieval of elements." },
     { name: "String", description: "A string is a sequence of characters. In programming, strings are used to represent text and are a fundamental data type in many programming languages." },
     { name: "Linux", description: "Linux is an open-source operating system kernel known for its stability, security, and flexibility. It serves as the foundation for various operating systems, offering a customizable and powerful environment for servers, desktops, and embedded systems" }]
+  
     return (
-        <div style={{ marginTop: '100px', overflowX: 'hidden' }}>
+        <div style={{ marginTop: '60px', overflowX: 'hidden' }}>
             <h1 style={{ color: "blue", marginLeft: "3rem" }}>
                 Tags
             </h1>
 
-            <Grid container spacing={2} style={{ justifyContent: 'center' }} >
+            <Grid container spacing={2} style={{ justifyContent: 'center',marginLeft:'0' }} >
                 {questiontags.map((questiontag, i) =>
                     <Grid item xs={5} sm={3} md={3} lg={2.4} key={i} sx={{ margin: "1rem", border: "0.4px solid black" }} >
                         <Link to='/tagSelected' state={{ questiontag:questiontag.name }}> <Typography sx={{ marginLeft: "1rem", marginTop: "0.5rem", borderRadius: "6px", backgroundColor: theme.palette.primary.light, color: theme.palette.primary.main, padding: "0.2rem", fontSize: "0.7rem", display: "inline" }}>

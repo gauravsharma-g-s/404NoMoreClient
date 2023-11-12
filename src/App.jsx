@@ -4,7 +4,7 @@ import LoginPage from './scenes/LoginPage'
 import theme from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { useSelector } from "react-redux"
-import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom"
+import { Route, Routes, Navigate, BrowserRouter, HashRouter } from "react-router-dom"
 import Menu from "./scenes/widgets/Menu"
 import UserEdit from "./scenes/widgets/UserEdit"
 import './index.css'
@@ -23,11 +23,10 @@ function App() {
   const isAuth = useSelector(state => state.token);
   return (
     <div height="100%" className="app">
-      <BrowserRouter>
+      <HashRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      {window.location.pathname!=='/' && <Navbar/>}
-      
+      {window.location.hash!=='' && window.location.hash!=='#/' && <Navbar/>}
       <Routes>
         <Route exact path='/' element={<LoginPage/>}/>
         <Route exact path='/home' element={isAuth?<HomePage/>:<Navigate to="/"/>}/>
@@ -44,7 +43,7 @@ function App() {
       </Routes>
 
     </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
 
     </div>
   )

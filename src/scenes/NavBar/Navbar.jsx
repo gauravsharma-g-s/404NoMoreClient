@@ -19,7 +19,6 @@ function Navbar() {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user);
   const fullName = user.firstName + " " + user.lastName;
-
   const textColor = theme.palette.background.main;
   const backgroundMedium_2 = theme.palette.background.medium_2;
 
@@ -94,8 +93,8 @@ function Navbar() {
             bottom="0"
             height="90%"
             zIndex="10"
-            maxWidth="500px"
-            minWidth="300px"
+            maxWidth="400px"
+            minWidth="250px"
             backgroundColor='white'
             marginLeft='8px'
             borderRadius='4px'
