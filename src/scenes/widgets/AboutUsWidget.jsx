@@ -13,7 +13,7 @@ function AboutUsWidget() {
             {/* Section 1 */}
             <Grid container gap={4} justifyContent='center' alignItems='center' columnSpacing={{ xs: 1, sm: 2, md: 8, lg: 24 }}>
                 <Grid item xs={10} sm={10} md={10} lg={5} justifyContent='center'>
-                    <img src='./src/assets/community.png' alt="community" style={{ marginTop: '50px' }} />
+                    <img src='/community.png' alt="community" style={{ marginTop: '50px' }} />
                 </Grid>
                 <Grid item xs={10} sm={10} md={10} lg={5} >
                     <Typography style={{ color: 'grey', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '1rem' }}>Who we are?</Typography>

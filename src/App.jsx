@@ -5,8 +5,6 @@ import theme from "./theme"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { useSelector } from "react-redux"
 import { Route, Routes, Navigate, BrowserRouter, HashRouter } from "react-router-dom"
-import Menu from "./scenes/widgets/Menu"
-import UserEdit from "./scenes/widgets/UserEdit"
 import './index.css'
 import ProfilePage from "./scenes/ProfilePage/ProfilePage"
 import ProfileEditPage from "./scenes/ProfileEditPage"
@@ -22,7 +20,7 @@ import TCPage from "./scenes/TCPage"
 function App() {
   const isAuth = useSelector(state => state.token);
   return (
-    <div height="100%" className="app">
+    <div height="100%" className="app" >
       <HashRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
